@@ -5,7 +5,7 @@ pipeline{
 			stage ('test'){
 				steps{
 					//dir("build_java"){
-						Sh "gradle test -DcucumberOptions"
+						Sh "gradle test"
 					//}
 				}
 			}
