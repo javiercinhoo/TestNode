@@ -5,7 +5,7 @@ pipeline{
 			stage ('test'){
 				steps{
 					//dir("build_java"){
-						Sh 'gradle test'
+						sh 'gradle test'
 					//}
 				}
 			}
