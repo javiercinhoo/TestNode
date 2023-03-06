@@ -1,0 +1,42 @@
+plugins {
+    id 'java'  
+    id "org.sonarqube" version "3.5.0.2730"
+}
+group 'com.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 13
+targetCompatibility = 13
+
+repositories {
+    mavenCentral()
+}                        
+
+dependencies {                 
+    testImplementation 'junit:junit:4.13.1'  
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59' 
+    testImplementation 'io.cucumber:cucumber-java:4.2.0'
+    testImplementation 'io.cucumber:cucumber-junit:4.2.0'
+    testImplementation 'commons-io:commons-io:2.7'  
+    testImplementation 'org.assertj:assertj-core:3.9.1'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'          
+}
+test {
+    useJUnit()
+}
+sonarqube {
+    properties {
+        property "sonar.coverage.exclusions", "**/*.class"
+        //property "sonar.inclusions", "**/*RunnerTags.java"
+        property "sonar.login", "squ_8048098696e2bd060e9e5970012c367766676655"
+        property "sonar.projectKey", "TestNode"        
+        property "sonar.scm.disabled", "true"
+        //property "sonar.scm.provider", "git"
+
+    }
+}
+// Jenkins integration
+task testAndSonarqube(type: Test) {
+    useJUnit()
+    dependsOn sonarqube
+}
