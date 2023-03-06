@@ -1,0 +1,96 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "As a user I enter a search criteria in Google",
+        "description": "",
+        "id": "test-google-search-funcionality;as-a-user-i-enter-a-search-criteria-in-google",
+        "after": [
+          {
+            "result": {
+              "duration": 486900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14071815900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on the Google search page",
+            "match": {
+              "location": "GoogleSteps.navigateToGoogle()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4880734100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter a search criteria",
+            "match": {
+              "location": "GoogleSteps.enterSearchCriteria()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20384395200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on the search button",
+            "match": {
+              "location": "GoogleSteps.clickSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 268464800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the results match the criteria",
+            "match": {
+              "location": "GoogleSteps.validateResults()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Run"
+          }
+        ]
+      }
+    ],
+    "name": "Test Google search funcionality",
+    "description": "",
+    "id": "test-google-search-funcionality",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/traductor_google.feature",
+    "tags": [
+      {
+        "name": "@Run",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

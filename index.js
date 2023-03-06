@@ -4,7 +4,7 @@ report.generate({
   jsonDir: "reports",
   reportPath: "reports",
 
-  openReportInBrowser: true,
+  openReportInBrowser: false,
   displayReportTime: true,
   displayDuration: true,
   saveCollectedJSON :false,
